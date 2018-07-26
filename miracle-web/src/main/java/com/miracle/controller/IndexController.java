@@ -26,6 +26,13 @@ public class IndexController {
     public String index(){
         String result = assAz.indexString();
         logger.info("ces");
-        return "Hello World!           "+result;
+        return "博客施工中，敬请期待！";
+    }
+
+    @RequestMapping("/")
+    public String indexMain(){
+        String result = assAz.indexString();
+        logger.info("ces");
+        return "博客施工中，敬请期待！          ";
     }
 }
