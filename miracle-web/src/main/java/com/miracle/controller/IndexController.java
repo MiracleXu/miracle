@@ -4,6 +4,7 @@ import com.miracle.interfaces.AssAz;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Copyright: 2018 www.lvmama.com All rights reserved.
  **/
 
-@RestController
+@Controller
 public class IndexController {
 
     private static final Logger logger = LogManager.getLogger(IndexController.class);
@@ -26,13 +27,13 @@ public class IndexController {
     public String index(){
         String result = assAz.indexString();
         logger.info("ces");
-        return "博客施工中，敬请期待！";
+        return "indexMain";
     }
 
     @RequestMapping("/")
     public String indexMain(){
         String result = assAz.indexString();
         logger.info("ces");
-        return "博客施工中，敬请期待！          ";
+        return "indexMain";
     }
 }
