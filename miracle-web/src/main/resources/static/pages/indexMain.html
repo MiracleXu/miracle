@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- import Vue before Element -->
+    <script src="../js/miracle/vue.js"></script>
+    <!-- 引入组件库 -->
+    <script src="../js/miracle/index.js"></script>
     <title>首页</title>
 </head>
 <body>
-<p>hello world!</p>
+    <div id="app">
+        <el-button type="primary" @click="dialogVisible = true">喵~</el-button>
+        <el-dialog
+                title="喵说"
+                :visible.sync="dialogVisible"
+                width="30%"
+                :before-close="handleClose">
+            <span>博客施工中，敬请期待~</span>
+            <span slot="footer" class="dialog-footer">
+                <el-button @click="dialogVisible = false">取 消</el-button>
+                <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+            </span>
+        </el-dialog>
+    </div>
 </body>
+<script src="../js/miracle/main.js"></script>
 </html>
