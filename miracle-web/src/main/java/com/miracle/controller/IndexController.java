@@ -6,7 +6,6 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Miracle Xu
@@ -25,15 +24,15 @@ public class IndexController {
 
     @RequestMapping("/index")
     public String index(){
+        logger.info("请求url：/index");
         String result = assAz.indexString();
-        logger.info("ces");
         return "indexMain";
     }
 
     @RequestMapping("/")
     public String indexMain(){
+        logger.info("请求url：/\"\"");
         String result = assAz.indexString();
-        logger.info("ces");
         return "indexMain";
     }
 }

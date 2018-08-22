@@ -15,6 +15,6 @@ public class AssAzImpl implements AssAz {
 
     @Override
     public String indexString() {
-        return "AssaZ";
+        return "AssaZzzzaz";
     }
 }
