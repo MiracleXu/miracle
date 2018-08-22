@@ -10,7 +10,7 @@ new Vue({
     methods: {
         init:function(){
             var self = this;
-            this.$http.get('http://localhost:8081/test').then(response => {
+            this.$http.get('http://www.xuting.xyz/test').then(response => {
                 console.log(response.data);
                 self.result = response.data.result;
                 console.log(self.result);
