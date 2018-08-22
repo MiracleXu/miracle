@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <!-- import Vue before Element -->
     <script src="../js/miracle/vue.js"></script>
+    <script src="../js/miracle/axios.min.js"></script>
+    <script src="../js/miracle/vue-resource.js"></script>
     <!-- 引入组件库 -->
     <script src="../js/miracle/index.js"></script>
     <title>首页</title>
@@ -25,6 +27,7 @@
                 <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
             </span>
         </el-dialog>
+        <el-input v-model="result" placeholder="请输入内容"></el-input>
     </div>
 </body>
 <script src="../js/miracle/main.js"></script>
