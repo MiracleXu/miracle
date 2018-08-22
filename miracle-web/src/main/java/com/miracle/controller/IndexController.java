@@ -33,7 +33,6 @@ public class IndexController {
     @RequestMapping("/")
     public String indexMain(){
         String result = assAz.indexString();
-
         logger.info("ces");
         return "indexMain";
     }
