@@ -13,7 +13,7 @@ new Vue({
     methods: {
         init:function(){
             var self = this;
-            this.$http.get('http://localhost:8081/test').then(response => {
+            this.$http.get('http://www.xuting.com/test').then(response => {
                 console.log(response.data);
                 self.result = response.data.result;
                 self.tableData = response.data.firstDao;
