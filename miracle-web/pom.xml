@@ -24,6 +24,11 @@
             <artifactId>miracle-interface</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.miracle</groupId>
+            <artifactId>miracle-dao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
