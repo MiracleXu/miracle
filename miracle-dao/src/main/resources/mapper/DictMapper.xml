@@ -9,6 +9,8 @@
         <result column="value" jdbcType="VARCHAR" property="value" />
         <result column="valid" jdbcType="INTEGER" property="valid" />
     </resultMap>
+
+
     <sql id="Base_Column_List">
         id,create_time,update_time,`key`,`value`,valid
     </sql>
