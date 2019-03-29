@@ -13,4 +13,7 @@ spring:
       suffix: .html
 logging:
   config: classpath:log4j2.yml
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
 

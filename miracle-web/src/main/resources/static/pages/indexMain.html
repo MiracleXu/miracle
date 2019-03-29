@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--百度抓取-->
+    <meta name="baidu-site-verification" content="Zh0SDaTVsU" />
     <link rel="icon" type="image/x-icon" href="/img/favicon2.ico" />
     <!-- 引入样式 -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
@@ -28,7 +30,53 @@
             </span>
         </el-dialog>
         <el-input v-model="result" placeholder="请输入内容"></el-input>
+        <template>
+            <el-table
+                    :data="tableData"
+                    style="width: 100%">
+                <el-table-column
+                        prop="id"
+                        label="id"
+                        width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="key"
+                        label="key"
+                        width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="value"
+                        label="value">
+                </el-table-column>
+                <el-table-column
+                        prop="valid"
+                        label="valid">
+                </el-table-column>
+                <el-table-column
+                        prop="createTime"
+                        label="createTime">
+                </el-table-column>
+                <el-table-column
+                        prop="updateTime"
+                        label="updateTime">
+                </el-table-column>
+            </el-table>
+        </template>
     </div>
 </body>
 <script src="../js/miracle/main.js"></script>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 </html>

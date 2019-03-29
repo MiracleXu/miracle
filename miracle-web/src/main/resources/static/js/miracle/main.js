@@ -2,7 +2,10 @@ new Vue({
     el: '#app',
     data: {
         dialogVisible: false,
-        result:""
+        result:"",
+        tableData:[{
+            id:""
+        }]
     },
     mounted:function() {
         this.init();
@@ -10,9 +13,10 @@ new Vue({
     methods: {
         init:function(){
             var self = this;
-            this.$http.get('http://localhost:8081/test').then(response => {
+            this.$http.get('http://www.xuting.xyz/test').then(response => {
                 console.log(response.data);
                 self.result = response.data.result;
+                self.tableData = response.data.firstDao;
                 console.log(self.result);
             }, response => {
                 console.log("error");
