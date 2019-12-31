@@ -5,7 +5,8 @@ new Vue({
         result:"",
         tableData:[{
             id:""
-        }]
+        }],
+        activeNames: ['1']
     },
     mounted:function() {
         this.init();
